@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gargoyle
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d3312d02a690eda48bd6807bf5c78084, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d3312d02a690eda48bd6807bf5c78084, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.696
@@ -158,6 +162,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4508636322420660310}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: d3312d02a690eda48bd6807bf5c78084,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 257357702433761780}
   m_SourcePrefab: {fileID: 100100000, guid: d3312d02a690eda48bd6807bf5c78084, type: 3}
 --- !u!1 &9059700279721757062 stripped
 GameObject:
@@ -188,6 +196,21 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &257357702433761780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9059700279721757062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885568cccdc97de4989939412dd47d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlertRadius
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &9059700279721924006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d3312d02a690eda48bd6807bf5c78084,

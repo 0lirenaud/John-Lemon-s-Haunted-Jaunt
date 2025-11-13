@@ -15,8 +15,6 @@ public class Observer : MonoBehaviour
     public bool isPlayerInSight = false;
     public GameObject player;
 
-    Vector3 lookDirection = Vector3.forward;
-
     private void Start()
     {
         StartCoroutine(FOVRoutine());
@@ -33,23 +31,32 @@ public class Observer : MonoBehaviour
             if (rangeChecks.Length != 0)
             {
                 Transform player = rangeChecks[0].transform;
-                Vector3 targetDirection = (player.transform.position - transform.position).normalized;
+                Vector3 playerPos = new Vector3(player.position.x, 0, player.position.z);
+                Vector3 pos = new Vector3(transform.position.x, 0, transform.position.z);
+
+                Vector3 targetDirection = (playerPos - pos).normalized;
                 float playerAngle = Vector3.Angle(transform.forward, targetDirection);
 
-                if (playerAngle <= fovAngle / 2)
-                {
-                    //isPlayerInSight = hit.transform.CompareTag("Player");
-                    if (isPlayerInSight) Debug.Log($"I see you");
-                }
-                else
-                {
-                    isPlayerInSight = false;
-                }
+
+                isPlayerInSight = playerAngle <= fovAngle / 2 && canSeePlayer(player);
             }
             else
             {
                 isPlayerInSight = false;
             }
         }
+    }
+
+    private bool canSeePlayer(Transform playerTransform)
+    {
+        Vector3 direction = playerTransform.position - transform.position + Vector3.up;
+        Ray ray = new(transform.position, direction);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            return hit.collider.gameObject.CompareTag("Player");
+        }
+
+        return false;
     }
 }
