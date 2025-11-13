@@ -8,30 +8,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9059700279721924006}
     m_Modifications:
+    - target: {fileID: 332931277904584013, guid: 6d45b1c73db8fbc47b82066086384c7f,
+        type: 3}
+      propertyPath: radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 332931277904584013, guid: 6d45b1c73db8fbc47b82066086384c7f,
+        type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4
+      value: 0.175
       objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9848078
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.17364816
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
@@ -46,7 +56,7 @@ PrefabInstance:
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
@@ -63,7 +73,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointOfView
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5326190265026542503, guid: 6d45b1c73db8fbc47b82066086384c7f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5326190265026542503, guid: 6d45b1c73db8fbc47b82066086384c7f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -314,8 +314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -171.34415}
-  m_SizeDelta: {x: 361.4092, y: 25.3117}
+  m_AnchoredPosition: {x: 2.800003, y: -240.4}
+  m_SizeDelta: {x: 1920, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241908086
 MonoBehaviour:
@@ -601,7 +601,12 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
+    - target: {fileID: 2277320853921723023, guid: 1f63f17a216c82f478b413c505400257,
+        type: 3}
+      propertyPath: radius
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2277320853921723023, guid: 1f63f17a216c82f478b413c505400257,
         type: 3}
       propertyPath: gameEnding
@@ -1021,8 +1026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -171.34415}
-  m_SizeDelta: {x: 361.4092, y: 25.3117}
+  m_AnchoredPosition: {x: 2.800003, y: -240.4}
+  m_SizeDelta: {x: 1920, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621391270
 MonoBehaviour:
@@ -2808,11 +2813,11 @@ RectTransform:
   - {fileID: 241908085}
   m_Father: {fileID: 1890113075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.30729622, y: 0.045372065}
+  m_AnchorMax: {x: 0.68646926, y: 0.112}
+  m_AnchoredPosition: {x: 132, y: 131}
+  m_SizeDelta: {x: -258, y: 78}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1441799819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +2950,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
     - target: {fileID: 8490468940549394596, guid: 079b180ad56eb0247a9b9a25959ca37e,
         type: 3}
       propertyPath: gameEnding
@@ -3039,7 +3044,12 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
+    - target: {fileID: 8490468940549394596, guid: 079b180ad56eb0247a9b9a25959ca37e,
+        type: 3}
+      propertyPath: radius
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8490468940549394596, guid: 079b180ad56eb0247a9b9a25959ca37e,
         type: 3}
       propertyPath: gameEnding
@@ -3115,6 +3125,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4080426654122210894, guid: 079b180ad56eb0247a9b9a25959ca37e,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080426654122210894, guid: 079b180ad56eb0247a9b9a25959ca37e,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -3127,7 +3142,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
     - target: {fileID: 8490468940549394596, guid: 079b180ad56eb0247a9b9a25959ca37e,
         type: 3}
       propertyPath: gameEnding
@@ -3205,7 +3220,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
     - target: {fileID: 2277320853921723023, guid: 1f63f17a216c82f478b413c505400257,
         type: 3}
       propertyPath: gameEnding
@@ -3365,7 +3380,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
     - target: {fileID: 2277320853921723023, guid: 1f63f17a216c82f478b413c505400257,
         type: 3}
       propertyPath: gameEnding
@@ -3494,7 +3509,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1751477776
 RectTransform:
@@ -3865,7 +3880,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2164660675358647168}
+      objectReference: {fileID: 714890850}
     - target: {fileID: 2277320853921723023, guid: 1f63f17a216c82f478b413c505400257,
         type: 3}
       propertyPath: gameEnding
@@ -3978,6 +3993,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JohnLemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591022441285864466, guid: 7950360d93c30b247934648dd834b0dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591022441285864466, guid: 7950360d93c30b247934648dd834b0dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6591022441286291506, guid: 7950360d93c30b247934648dd834b0dd,
         type: 3}

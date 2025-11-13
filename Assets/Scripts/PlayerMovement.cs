@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    const float SPRINT_SPEED = 1.5f;
-    const float RUN_COST = 40.0f;
-
     public float turnSpeed = 20f;
     public float stamina;
     public float maxStamina;
@@ -18,9 +15,11 @@ public class PlayerMovement : MonoBehaviour
     Animator m_Animator;
     Rigidbody m_Rigidbody;
     AudioSource m_AudioSource;
-    Coroutine recharge;
     float speed = 1.0f;
-    bool m_Running = false;
+    float sprintSpeed = 1.5f;
+    float runCost = 40.0f;
+    bool isRunning = false;
+    bool isRecharging = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,14 +54,14 @@ public class PlayerMovement : MonoBehaviour
             m_AudioSource.Stop();
         }
 
-        speed = m_Running ? SPRINT_SPEED : 1.0f;
+        speed = isRunning ? sprintSpeed : 1.0f;
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
         m_Rotation = Quaternion.LookRotation(desiredForward);
     }
 
     private void Update()
     {
-        PlayerRunning();
+        Run();
     }
 
     void OnAnimatorMove()
@@ -71,38 +70,35 @@ public class PlayerMovement : MonoBehaviour
         m_Rigidbody.MoveRotation(m_Rotation);
     }
 
-    void PlayerRunning()
+    void Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = SPRINT_SPEED;
-            stamina -= RUN_COST * Time.deltaTime;
+            if (stamina > 0)
+            {
+                isRunning = true;
+                speed = sprintSpeed;
+                stamina = Mathf.Clamp(stamina - runCost * Time.deltaTime, 0f, maxStamina);
 
-            if (stamina < 0)
-                stamina = 0;
-
-            staminaBar.fillAmount = stamina / maxStamina;
-            if (recharge != null) StopCoroutine(recharge);
-            recharge = StartCoroutine(RechargeStamina());
+                staminaBar.fillAmount = stamina / maxStamina;
+                StopCoroutine(RechargeStamina());
+            }
         }
         else
         {
             speed = 1.0f;
+            StartCoroutine(RechargeStamina());
         }
     }
 
     IEnumerator RechargeStamina()
     {
-        yield return new WaitForSeconds(1f);
-
-        while (stamina < maxStamina)
+        if (stamina < maxStamina)
         {
-            stamina += chargeRate / 10f;
-            if (stamina > maxStamina)
-                stamina = maxStamina;
-
+            isRecharging = true;
+            yield return new WaitForSeconds(1f);
+            stamina = Mathf.Clamp(stamina + chargeRate * Time.deltaTime, 0f, maxStamina);
             staminaBar.fillAmount = stamina / maxStamina;
-            yield return new WaitForSeconds(.1f);
         }
     }
 }

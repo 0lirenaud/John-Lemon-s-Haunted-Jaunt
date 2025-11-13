@@ -68,5 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f768ae4b0357904598b8d57698679dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Observer
-  player: {fileID: 0}
+  fovAngle: 60
+  radius: 7
   gameEnding: {fileID: 0}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  isPlayerInSight: 0
+  player: {fileID: 6591022441285864466, guid: 7950360d93c30b247934648dd834b0dd, type: 3}

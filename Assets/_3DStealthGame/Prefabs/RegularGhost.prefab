@@ -8,6 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3911895885305952210}
     m_Modifications:
+    - target: {fileID: 332931277904584013, guid: 6d45b1c73db8fbc47b82066086384c7f,
+        type: 3}
+      propertyPath: radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 332931277904584013, guid: 6d45b1c73db8fbc47b82066086384c7f,
+        type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 338517082147358798, guid: 6d45b1c73db8fbc47b82066086384c7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68,7 +78,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5326190265026542503, guid: 6d45b1c73db8fbc47b82066086384c7f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
