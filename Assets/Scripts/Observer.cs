@@ -38,7 +38,7 @@ public class Observer : MonoBehaviour
                 float playerAngle = Vector3.Angle(transform.forward, targetDirection);
 
 
-                isPlayerInSight = playerAngle <= fovAngle / 2 && canSeePlayer(player);
+                isPlayerInSight = playerAngle <= fovAngle / 2 && CanSeePlayer(player);
             }
             else
             {
@@ -47,7 +47,7 @@ public class Observer : MonoBehaviour
         }
     }
 
-    private bool canSeePlayer(Transform playerTransform)
+    private bool CanSeePlayer(Transform playerTransform)
     {
         Vector3 direction = playerTransform.position - transform.position + Vector3.up;
         Ray ray = new(transform.position, direction);

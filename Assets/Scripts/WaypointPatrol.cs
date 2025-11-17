@@ -54,8 +54,11 @@ public class WaypointPatrol : MonoBehaviour
 
     public void GoToAlert(Vector3 position)
     {
-        isAlerted = true;
-        navMeshAgent.SetDestination(position);
-        navMeshAgent.stoppingDistance = ALERT_STOP_DISTANCE;
+        if (!ghostBehaviour.isChasing)
+        {
+            isAlerted = true;
+            navMeshAgent.SetDestination(position);
+            navMeshAgent.stoppingDistance = ALERT_STOP_DISTANCE;
+        }
     }
 }
